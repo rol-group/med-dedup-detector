@@ -31,7 +31,7 @@ from spikedetection import detectspikesMat
 X = load_binary(path_to_binary) # [Nchans x Nsamples] replace with your loading code
 fs = 20000
 batch_size = 10 * 20000 # 10s in samples
-Nbatches = X.shape[1] // batch_size + 1 * (X%batch_size != 0)
+Nbatches = X.shape[1] // batch_size + 1 * (X.shape[1]%batch_size != 0)
 
 allspks = []
 for i in range(Nbatches):
