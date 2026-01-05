@@ -1,0 +1,24 @@
+[tool.ruff]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["spikedetection/"]
+
+[project]
+name = "spikedetection"
+version = "0.1.0"
+description = "Python package for running code associated with \"A Fast and Simple Spike Detection Algorithm\""
+authors = [
+    {name = "Nathan Renegar", email = "nrenegar@umd.edu"}
+]
+license = {text="MIT License"}
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "scipy",
+    "scikit-learn",
+    "h5py"
+]
